@@ -1,0 +1,28 @@
+{
+  "name": "lit-element-beers",
+  "version": "1.0.0",
+  "description": "LitElement Beers - A LitElement tutorial",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lostinbrittany/lit-element-beers.git"
+  },
+  "keywords": [
+    "lit-element",
+    "LitElement",
+    "beers",
+    "tutorial"
+  ],
+  "author": "Horacio Gonzalez <horacio.gonzalez@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lostinbrittany/lit-element-beers/issues"
+  },
+  "homepage": "https://github.com/lostinbrittany/lit-element-beers#readme",
+  "dependencies": {
+    "lit-element": "^2.1.0"
+  },
+  "devDependencies": {
+    "@pika/web": "^0.4.2"
+  }
+}
