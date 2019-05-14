@@ -60,7 +60,7 @@ If not, you can use [NodeJS](http://nodejs.org). We have put a minimalist JavaSc
 As the computer used for the course haven't Git, we have structured the project to allow a Git-less use. The `app` directory is the main directory of the project, the working version of the code. The tutorial is divided in steps, each one in its own directory:
 
 1. [Static HTML](./step-01/)
-1. [Using Polymer elements](./step-02/)
+1. [Using LitElement elements](./step-02/)
 1. [Creating a new element](./step-03/)
 1. [Filtering](./step-04/)
 1. [Sorting](./step-05/)
