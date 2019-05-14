@@ -71,7 +71,7 @@ In the template we use `@input` to link the `input` event of the `input` item to
           class="form-control" 
           id="search"  
           placeholder="Enter search"
-          @input="${this._inputChange">
+          @input="${this._inputChange}">
       ...
       <div>Current search: ${this.filterText}</div>
       ...
@@ -100,7 +100,7 @@ Inside it we are using the LitElement `shadowRoot` property to use it as base fo
 
 ```js
   _inputChange() {
-    this.filterText = this.shadowRoow.querySelector('#search').value;
+    this.filterText = this.shadowRoot.querySelector('#search').value;
   }
 ```
 And now we have a two-way data-binding between the input field and the label under it.
