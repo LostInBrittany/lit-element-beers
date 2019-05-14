@@ -178,7 +178,7 @@ So now the beers are rendered inside a Bootstrap [container](https://getbootstra
 In the element's `template` you have access to the beers variable, you can then get it's size and show it after the beers:
 
 ```html
-<div>Number of beers in list: ${beers.length}</div>
+<div>Number of beers in list: ${this.beers.length}</div>
 ```
 
 ### Play with `dom-repeat`

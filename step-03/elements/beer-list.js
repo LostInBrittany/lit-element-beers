@@ -52,7 +52,7 @@ class BeerList extends LitElement {
             `;
           })
         }
-        <div>Number of beers in list: ${beers.length}</div>
+        <div>Number of beers in list: ${this.beers.length}</div>
       </div>
     `;
   }
