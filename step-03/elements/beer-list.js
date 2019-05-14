@@ -1,4 +1,7 @@
 import { LitElement, html } from '../web_modules/lit-element.js';
+
+import bootstrapStyle from '../web_modules/@granite-elements/granite-lit-bootstrap.js';
+
 import './beer-list-item.js';
 
 const beers = [
@@ -34,16 +37,23 @@ class BeerList extends LitElement {
     };
   }
 
+  static get styles() {
+    return bootstrapStyle;
+  }
+
   render() {
     return html`
-      ${
-        this.beers.map( (beer) => {
-          return html`
-            <beer-list-item name="${beer.name}" description="${beer.description}">
-            </beer-list-item>
-          `;
-        })
-      }
+      <div class="container"></div>
+        ${
+          this.beers.map( (beer) => {
+            return html`
+              <beer-list-item name="${beer.name}" description="${beer.description}">
+              </beer-list-item>
+            `;
+          })
+        }
+        <div>Number of beers in list: ${beers.length}</div>
+      </div>
     `;
   }
 }

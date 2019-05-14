@@ -94,14 +94,16 @@ Well, the template literal syntax used in the `render()` method is very flexible
 ```js
   render() {
     return html`
-      ${
-        this.beers.map( (beer) => {
-          return html`
-            <beer-list-item name="${beer.name}" description="${beer.description}">
-            </beer-list-item>
-          `;
-        })
-      }
+      <div class="container"></div>
+        ${
+          this.beers.map( (beer) => {
+            return html`
+              <beer-list-item name="${beer.name}" description="${beer.description}">
+              </beer-list-item>
+            `;
+          })
+        }
+      </div>
     `;
   }
 ```
@@ -135,32 +137,36 @@ And use it in the body:
 
 ## Let's add some Bootstrap
 
-We can now use [`granite-bootstrap`](https://github.com/lostinbrittany/granite-bootstrap) to add Bootstrap look and feel
-to your component.
+We can now use [`granite-lit-bootstrap`](https://github.com/lostinbrittany/granite-lit-bootstrap) to add Bootstrap look and feel to your components.
 
-You begin  by importing `granite-bootstrap`:
+Begin by installing `granite-lit-bootstrap`:
 
-```js
-import '@granite-elements/granite-bootstrap/granite-bootstrap.js';
+```
+npm i @granite-elements/granite-lit-bootstrap
 ```
 
-and then, inside your component, use granite-bootstrap as shared style:
+And run `@pika/web` to generate the modules for the browser:
+
+```
+npx @pika/web
+```
+
+Then import it in `beer-list` and `beer-list-item`:
 
 ```js
-  static get template() {
-    return html`
-      <style include="granite-bootstrap"></style>
-      <div class="beers container">
-        <template is="dom-repeat" items="[[beers]]">
-          <beer-list-item name="[[item.name]]" description="[[item.description]]">
-          </beer-list-item>
-        </template>
-      </div>
-    `;
+import bootstrapStyle from '../web_modules/@granite-elements/granite-lit-bootstrap.js';
+```
+
+and use `granite-lit-bootstrap` in the static `styles` property for both elements:
+
+
+```js
+  static get styles() {
+    return bootstrapStyle;
   }
 ```
 
-So no the beers are rendered inside a Bootstrap [container](https://getbootstrap.com/docs/4.1/layout/overview/#containers) element, as you can see with the margins.
+So now the beers are rendered inside a Bootstrap [container](https://getbootstrap.com/docs/4.1/layout/overview/#containers) element, as you can see with the margins.
 
 ![Screenshot](../img/step-03-01.jpg)
 
@@ -172,7 +178,7 @@ So no the beers are rendered inside a Bootstrap [container](https://getbootstrap
 In the element's `template` you have access to the beers variable, you can then get it's size and show it after the beers:
 
 ```html
-<div>Number of beers in list: [[beers.length]]</div>
+<div>Number of beers in list: ${beers.length}</div>
 ```
 
 ### Play with `dom-repeat`
@@ -182,17 +188,13 @@ Create a repeater in `beer-list` that constructs a simple table:
 ```html
 <table>
   <tr><th>Row number</th></tr>
-  <template is="dom-repeat" items="[0, 1, 2, 3, 4, 5, 6, 7]">
-    <tr><td>[[item]]</td></tr>
-  </template>
+  ${[0, 1, 2, 3, 4, 5, 6, 7].map((item) => html`<tr><td>${item}</td></tr>`)}
 </table>
 ```
 
 Extra points: try and make an 8x8 table using an additional `dom-repeat`.
 
-*Note: To access properties from nested `dom-repeat` templates, use the `as` attribute to assign a different name for the item property. Use the `index-as` attribute to assign a different name for the `index` property.*
-
 ## Summary ##
 
-You now have a web application using Polymer web components.
+You now have a web application using LitElement web components.
 Now, let's go to [step-04](../step-04/) to learn how to add full text search to the app.

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/lostinbrittany/lit-element-beers#readme",
   "dependencies": {
+    "@granite-elements/granite-lit-bootstrap": "^4.3.1-2",
     "lit-element": "^2.1.0"
   },
   "devDependencies": {
