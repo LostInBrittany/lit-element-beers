@@ -104,7 +104,7 @@ Now we are going to complete the element definition:
     In `beer-list-item.js`, replace the existing import statement with the following code:
 
     ```js
-    import { LitElement, html } from 'web_modules/lit-element';
+    import { LitElement, html } from '../web_modules/lit-element.js';
     ```
 
 1. Create a class for your element that extends the `LitElement` base class.
