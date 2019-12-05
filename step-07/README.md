@@ -78,8 +78,8 @@ render() {
 And in the [lifecycle method](https://lit-element.polymer-project.org/guide/lifecycle) [`firstUpdated()`](https://lit-element.polymer-project.org/guide/lifecycle#firstupdated) (called after the element’s DOM has been updated the first time), we initialize the router and define the routes. In our case, we want a route to see the beer list and a route with a parameter to show the details of a beer.
 
 ```js
-firstUpdated() {
-  const outlet = document.shadowRoot.getElementById('outlet');
+firstUpdated() {  
+  const outlet = this.shadowRoot.querySelector;
   const router = new HashRouter(outlet);
   router.setRoutes([
     {path: '',     component: 'beer-list'},

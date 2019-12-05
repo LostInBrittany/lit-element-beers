@@ -9,7 +9,7 @@ In addition to the search box, the app displays a drop down menu that allows use
 To better see the filtering and sorting capabilities, let's add some more beers to our model:
 
 ```javascript
-const.beers = [
+const beers = [
   {
     "alcohol": 6.8,
     "name": "Affligem Blond",
