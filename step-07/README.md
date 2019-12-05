@@ -79,7 +79,7 @@ And in the [lifecycle method](https://lit-element.polymer-project.org/guide/life
 
 ```js
 firstUpdated() {  
-  const outlet = this.shadowRoot.querySelector;
+  const outlet = this.shadowRoot.querySelector('#outlet');
   const router = new HashRouter(outlet);
   router.setRoutes([
     {path: '',     component: 'beer-list'},
