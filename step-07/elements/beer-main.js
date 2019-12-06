@@ -2,6 +2,7 @@ import { LitElement, html } from '../web_modules/lit-element.js';
 
 import bootstrapStyle from '../web_modules/@granite-elements/granite-lit-bootstrap.js';
 
+//import { Router } from '../web_modules/@vaadin/router.js';
 import { HashRouter } from '../web_modules/@granite-elements/granite-vaadin-router.js';
 
 import './beer-list.js';
