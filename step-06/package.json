@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/lostinbrittany/lit-element-beers#readme",
   "dependencies": {
-    "@granite-elements/granite-lit-bootstrap": "^4.3.1-2",
+    "@granite-elements/granite-lit-bootstrap": "^4.3.1-3",
     "lit-element": "^2.1.0"
   },
   "devDependencies": {
-    "@pika/web": "^0.4.2"
+    "@pika/web": "^0.6.1"
   }
 }

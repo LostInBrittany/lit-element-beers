@@ -23,6 +23,6 @@
     "lit-element": "^2.1.0"
   },
   "devDependencies": {
-    "@pika/web": "^0.4.2"
+    "@pika/web": "^0.6.1"
   }
 }

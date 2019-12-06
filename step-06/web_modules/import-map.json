@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@granite-elements/granite-lit-bootstrap": "./@granite-elements/granite-lit-bootstrap.js",
+    "lit-element": "./lit-element.js"
+  }
+}
