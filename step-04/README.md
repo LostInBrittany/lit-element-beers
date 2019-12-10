@@ -146,7 +146,7 @@ In the `render()` method:
 And then: 
 
 ```js
-_getCurrentBeers() {
+_currentBeers() {
   // Do something clever...
 },
 ```
